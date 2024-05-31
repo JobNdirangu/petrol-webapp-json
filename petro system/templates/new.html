@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petrol Management System</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add this line before your custom script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Custom Script -->
+    <script src="../static/script.js"></script>
+  <style>
+    /* Add custom styles here */
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Petrol Management System</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Admin
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Manage System</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dashboard Content -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 bg-dark sidebar">
+        <div class="menu pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link " href="#" onclick="loadDashboard()">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="dailySales()">
+                  <i class="fas fa-dollar-sign"></i> Register Daily Sales
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadStock()">
+                <i class="fas fa-box"></i> New Stock
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadSalesReport()">
+                <i class="fas fa-chart-line"></i> Daily Sales Report
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadMonthlyReport()">
+                <i class="fas fa-calendar-alt"></i> Monthly Report
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9">
+        <div class="content" id="dynamic-content">
+          <!-- Content will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Your additional JavaScript code here -->
+  <script>
+
+    window.onload = function() {
+    loadDashboard();
+  };
+
+
+  </script>
+</body>
+</html>
